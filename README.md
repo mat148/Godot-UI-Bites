@@ -29,20 +29,18 @@ To clone a specific project, you can use Git's sparse checkout feature:
 mkdir zelda-botw-title-screen
 cd zelda-botw-title-screen
 
-# Initialize git
-git init
+# Clone the repo without checking out files
+git clone --no-checkout https://github.com/yourusername/godot-ui-bites.git .
+# (The dot at the end puts the files in the current directory)
 
-# Add the remote repository
-git remote add origin https://github.com/yourusername/godot-ui-bites.git
-
-# Enable sparse checkout
-git config core.sparseCheckout true
+# Enable sparse checkout (cone mode is recommended)
+git sparse-checkout init --cone
 
 # Specify the project directory
-echo "recreating-zelda-botw-title-screen--godot-ui-bites/*" > .git/info/sparse-checkout
+git sparse-checkout set recreating-zelda-botw-title-screen--godot-ui-bites
 
-# Pull the content
-git pull origin main
+# Checkout the files
+git checkout
 ```
 
 ## Requirements
