@@ -175,3 +175,5 @@ grow_horizontal = 0
 size_flags_horizontal = 0
 size_flags_vertical = 0
 icon = ExtResource("7_tqfpk")
+
+[connection signal="pressed" from="Panel/Control/OptionsMenuCloseButton" to="." method="_on_options_menu_close_button_pressed"]
