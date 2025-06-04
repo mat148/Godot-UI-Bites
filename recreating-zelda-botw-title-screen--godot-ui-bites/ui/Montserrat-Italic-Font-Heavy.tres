@@ -1,0 +1,10 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://w4i8xm8axb5x"]
+
+[ext_resource type="FontFile" uid="uid://cgwg42m8481bw" path="res://ui/Montserrat-Italic-VariableFont_wght.ttf" id="1_l00m5"]
+
+[resource]
+base_font = ExtResource("1_l00m5")
+variation_opentype = {
+2003265652: 700
+}
+spacing_glyph = -1

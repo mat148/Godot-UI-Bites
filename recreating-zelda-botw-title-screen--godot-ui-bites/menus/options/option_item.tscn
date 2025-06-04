@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://dyb4l3w35apvd"]
+
+[ext_resource type="Theme" uid="uid://bbxj20g3516g0" path="res://ui/ZeldaBOTW.tres" id="1_2mm1b"]
+[ext_resource type="Script" uid="uid://n2oihiha1ob2" path="res://menus/options/option_item.gd" id="2_b6x24"]
+
+[node name="OptionItem" type="Panel"]
+custom_minimum_size = Vector2(0, 58)
+theme = ExtResource("1_2mm1b")
+theme_type_variation = &"OptionItemDefault"
+script = ExtResource("2_b6x24")
+
+[node name="OptionItemMargin" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_2mm1b")
+theme_type_variation = &"OptionItemMargin"
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="OptionContainer" type="HBoxContainer" parent="OptionItemMargin"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="OptionLabel" type="Label" parent="OptionItemMargin/OptionContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme = ExtResource("1_2mm1b")
+theme_type_variation = &"OptionActionTitle"
+text = "Null"
+vertical_alignment = 1
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

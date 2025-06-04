@@ -1,0 +1,177 @@
+[gd_scene load_steps=9 format=3 uid="uid://bywra06scfhpe"]
+
+[ext_resource type="Shader" uid="uid://bdh4gx8e6fe8r" path="res://ui/blur.gdshader" id="1_2em67"]
+[ext_resource type="Theme" uid="uid://bbxj20g3516g0" path="res://ui/ZeldaBOTW.tres" id="1_hk64l"]
+[ext_resource type="Script" uid="uid://cvkclsqkr3txl" path="res://menus/options/options_menu.gd" id="2_ssx66"]
+[ext_resource type="Texture2D" uid="uid://dnk0qrjj0imwd" path="res://menus/options/assets/TheLegendofZelda_BreathoftheWild04232020-110012.jpg" id="4_aahoo"]
+[ext_resource type="PackedScene" uid="uid://dyb4l3w35apvd" path="res://menus/options/option_item.tscn" id="5_aahoo"]
+[ext_resource type="PackedScene" uid="uid://dgn6lhbkqlkoe" path="res://menus/options/optionsToggleButton.tscn" id="6_76ex8"]
+[ext_resource type="Texture2D" uid="uid://bmorjcult0hef" path="res://icon.svg" id="7_tqfpk"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2iev4"]
+shader = ExtResource("1_2em67")
+shader_parameter/amount = 2.753
+
+[node name="OptionsMenu" type="Panel"]
+material = SubResource("ShaderMaterial_2iev4")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_hk64l")
+script = ExtResource("2_ssx66")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("4_aahoo")
+
+[node name="Panel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_hk64l")
+theme_type_variation = &"OptionsMenuContainer"
+
+[node name="Control" type="Control" parent="Panel"]
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="Panel/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"OptionItemDefault"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/Control/CenterContainer"]
+custom_minimum_size = Vector2(800, 850)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/Control/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_hk64l")
+theme_type_variation = &"OptionsMenuTitle"
+text = "Options"
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/Control/CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/Control/CenterContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="OptionsContainer" type="VBoxContainer" parent="Panel/Control/CenterContainer/VBoxContainer/ScrollContainer/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 24
+
+[node name="OptionItem" parent="Panel/Control/CenterContainer/VBoxContainer/ScrollContainer/MarginContainer/OptionsContainer" instance=ExtResource("5_aahoo")]
+layout_mode = 2
+option_name = "Option"
+option_action = ExtResource("6_76ex8")
+option_description = "This is a test"
+
+[node name="OptionItem2" parent="Panel/Control/CenterContainer/VBoxContainer/ScrollContainer/MarginContainer/OptionsContainer" instance=ExtResource("5_aahoo")]
+layout_mode = 2
+option_name = "Option2"
+option_action = ExtResource("6_76ex8")
+option_description = "Option 2"
+
+[node name="OptionItem3" parent="Panel/Control/CenterContainer/VBoxContainer/ScrollContainer/MarginContainer/OptionsContainer" instance=ExtResource("5_aahoo")]
+layout_mode = 2
+option_name = "Option 3"
+option_action = ExtResource("6_76ex8")
+option_description = "Option 3"
+
+[node name="OptionItem4" parent="Panel/Control/CenterContainer/VBoxContainer/ScrollContainer/MarginContainer/OptionsContainer" instance=ExtResource("5_aahoo")]
+layout_mode = 2
+option_name = "Option 3"
+option_action = ExtResource("6_76ex8")
+option_description = "Option 3"
+
+[node name="OptionItem5" parent="Panel/Control/CenterContainer/VBoxContainer/ScrollContainer/MarginContainer/OptionsContainer" instance=ExtResource("5_aahoo")]
+layout_mode = 2
+option_name = "Option 3"
+option_action = ExtResource("6_76ex8")
+option_description = "Option 3"
+
+[node name="OptionItem6" parent="Panel/Control/CenterContainer/VBoxContainer/ScrollContainer/MarginContainer/OptionsContainer" instance=ExtResource("5_aahoo")]
+layout_mode = 2
+option_name = "Option 3"
+option_action = ExtResource("6_76ex8")
+option_description = "Option 3"
+
+[node name="OptionItem7" parent="Panel/Control/CenterContainer/VBoxContainer/ScrollContainer/MarginContainer/OptionsContainer" instance=ExtResource("5_aahoo")]
+layout_mode = 2
+option_name = "Option 3"
+option_action = ExtResource("6_76ex8")
+option_description = "Option 3"
+
+[node name="OptionItem8" parent="Panel/Control/CenterContainer/VBoxContainer/ScrollContainer/MarginContainer/OptionsContainer" instance=ExtResource("5_aahoo")]
+layout_mode = 2
+option_name = "Option 3"
+option_action = ExtResource("6_76ex8")
+option_description = "Option 3"
+
+[node name="OptionItem9" parent="Panel/Control/CenterContainer/VBoxContainer/ScrollContainer/MarginContainer/OptionsContainer" instance=ExtResource("5_aahoo")]
+layout_mode = 2
+option_name = "Option 3"
+option_action = ExtResource("6_76ex8")
+option_description = "Option 3"
+
+[node name="OptionItem10" parent="Panel/Control/CenterContainer/VBoxContainer/ScrollContainer/MarginContainer/OptionsContainer" instance=ExtResource("5_aahoo")]
+layout_mode = 2
+option_name = "Option 3"
+option_action = ExtResource("6_76ex8")
+option_description = "Option 3"
+
+[node name="OptionItem11" parent="Panel/Control/CenterContainer/VBoxContainer/ScrollContainer/MarginContainer/OptionsContainer" instance=ExtResource("5_aahoo")]
+layout_mode = 2
+option_name = "Option 3"
+option_action = ExtResource("6_76ex8")
+option_description = "Option 3"
+
+[node name="OptionItem12" parent="Panel/Control/CenterContainer/VBoxContainer/ScrollContainer/MarginContainer/OptionsContainer" instance=ExtResource("5_aahoo")]
+layout_mode = 2
+option_name = "Option 3"
+option_action = ExtResource("6_76ex8")
+option_description = "Option 3"
+
+[node name="OptionDescription" type="Label" parent="Panel/Control/CenterContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme = ExtResource("1_hk64l")
+theme_type_variation = &"OptionDescription"
+text = "This is a test"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="OptionsMenuCloseButton" type="Button" parent="Panel/Control"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -136.0
+offset_bottom = 136.0
+grow_horizontal = 0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+icon = ExtResource("7_tqfpk")

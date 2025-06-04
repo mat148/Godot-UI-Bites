@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://dgn6lhbkqlkoe"]
+
+[ext_resource type="Theme" uid="uid://bbxj20g3516g0" path="res://ui/ZeldaBOTW.tres" id="1_ypq1u"]
+[ext_resource type="Script" uid="uid://d33yh6wo4wwk" path="res://menus/options/options_toggle_button.gd" id="2_wj5my"]
+[ext_resource type="Texture2D" uid="uid://bmorjcult0hef" path="res://icon.svg" id="3_031li"]
+
+[node name="OptionToggleButton" type="Button"]
+size_flags_horizontal = 3
+theme = ExtResource("1_ypq1u")
+theme_type_variation = &"OptionActionButton"
+toggle_mode = true
+text = "Null"
+script = ExtResource("2_wj5my")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_031li")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="toggled" from="." to="." method="_on_toggled"]
