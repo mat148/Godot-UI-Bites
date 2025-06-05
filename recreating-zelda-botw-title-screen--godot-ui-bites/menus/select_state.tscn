@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://b6vf5yg1rsvxx"]
+
+[ext_resource type="Texture2D" uid="uid://se4d41hhlion" path="res://menus/selected_frame_1.png" id="1_mm8op"]
+[ext_resource type="Texture2D" uid="uid://b35llboid7f83" path="res://menus/selected_frame_2.png" id="2_ad0cx"]
+[ext_resource type="Texture2D" uid="uid://ds827psln4kib" path="res://menus/selected_frame_3.png" id="3_uo3qk"]
+[ext_resource type="Texture2D" uid="uid://mpvm58ssytbp" path="res://menus/selected_frame_4.png" id="4_q1c1h"]
+[ext_resource type="Texture2D" uid="uid://bxtt4oek3xjr" path="res://menus/selected_frame_5.png" id="5_0vrua"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_7hesd"]
+frames = 9
+speed_scale = 12.0
+frame_0/texture = ExtResource("1_mm8op")
+frame_1/texture = ExtResource("2_ad0cx")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("3_uo3qk")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("4_q1c1h")
+frame_3/duration = 1.0
+frame_4/texture = ExtResource("5_0vrua")
+frame_4/duration = 1.0
+frame_5/texture = ExtResource("4_q1c1h")
+frame_5/duration = 1.0
+frame_6/texture = ExtResource("3_uo3qk")
+frame_6/duration = 1.0
+frame_7/texture = ExtResource("2_ad0cx")
+frame_7/duration = 1.0
+frame_8/texture = ExtResource("1_mm8op")
+frame_8/duration = 1.0
+
+[node name="SelectState" type="NinePatchRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AnimatedTexture_7hesd")
+region_rect = Rect2(0, 0, 120, 120)
+patch_margin_left = 24
+patch_margin_top = 24
+patch_margin_right = 24
+patch_margin_bottom = 24

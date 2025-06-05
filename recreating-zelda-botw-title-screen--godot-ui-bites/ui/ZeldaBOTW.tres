@@ -16,6 +16,10 @@
 content_margin_top = 24.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4xh2a"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
 bg_color = Color(0.415686, 0.407843, 0.356863, 1)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
@@ -23,9 +27,9 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yf5bn"]
-content_margin_left = 48.0
+content_margin_left = 0.0
 content_margin_top = 0.0
-content_margin_right = 12.0
+content_margin_right = 0.0
 content_margin_bottom = 0.0
 bg_color = Color(0.180392, 0.172549, 0.152941, 1)
 corner_radius_top_left = 3
@@ -95,7 +99,7 @@ OptionDescription/fonts/font = ExtResource("1_smskd")
 OptionDescription/styles/normal = SubResource("StyleBoxEmpty_4xh2a")
 OptionItemActive/base_type = &"Panel"
 OptionItemActive/styles/panel = SubResource("StyleBoxFlat_4xh2a")
-OptionItemDefault/base_type = &"Panel"
+OptionItemDefault/base_type = &"PanelContainer"
 OptionItemDefault/styles/panel = SubResource("StyleBoxFlat_yf5bn")
 OptionItemMargin/base_type = &"MarginContainer"
 OptionItemMargin/constants/margin_bottom = 12
